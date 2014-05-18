@@ -74,7 +74,7 @@
     formView.layer.cornerRadius = 15;
 
     UILabel *titleLabel = [[UILabel alloc] init];
-    titleLabel.text = @"Native Reactive Form";
+    titleLabel.text = @"Native Registration Form";
     titleLabel.textColor = [UIColor whiteColor];
     titleLabel.font = [UIFont boldSystemFontOfSize:14];
     [formView addSubview:titleLabel];
