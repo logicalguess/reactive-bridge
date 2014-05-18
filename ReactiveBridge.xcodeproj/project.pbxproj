@@ -1,0 +1,531 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A6C18E02F5E74DE39DAE563D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B3850C4022A5495696C9A8BF /* libPods.a */; };
+		B6C53057161731F04365842C /* screen1.png in Resources */ = {isa = PBXBuildFile; fileRef = B6C539AAB23FB8605415705F /* screen1.png */; };
+		B6C5308460B9FB5C02787A18 /* WebViewJavascriptBridge.js.txt in Resources */ = {isa = PBXBuildFile; fileRef = B6C537B351C87DD474ED6DEE /* WebViewJavascriptBridge.js.txt */; };
+		B6C53090821C88CCE2BD22DC /* screen2.png in Resources */ = {isa = PBXBuildFile; fileRef = B6C539CFE183356F1DDA3276 /* screen2.png */; };
+		B6C530BB0AC39937128CDC41 /* www in Resources */ = {isa = PBXBuildFile; fileRef = B6C537228F7ACBCF460B77BA /* www */; };
+		B6C530E58C286CAC8FE36C0B /* WebViewJavascriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = B6C536B07921832A91E1346D /* WebViewJavascriptBridge.m */; };
+		B6C531EF8FB0D7DBF17F3AD9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B6C5367F194296D9029FBD8E /* main.m */; };
+		B6C53233E7EFB5DA9B705939 /* LGReactiveBridgeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6C539EC127BF161C7926CC6 /* LGReactiveBridgeViewController.m */; };
+		B6C5324A98A3CB15FB510A51 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6C53DA8BF1A9D100A5854C5 /* Images.xcassets */; };
+		B6C534DC75D79BD2919B6810 /* screen.png in Resources */ = {isa = PBXBuildFile; fileRef = B6C5317D607694E073BD68E8 /* screen.png */; };
+		B6C5375F0FA302F6D7B842F9 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6C53B3902E44B77E9B8A309 /* XCTest.framework */; };
+		B6C537A85205F5201D77BDEF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6C53FB23F5EB2D289B36FC5 /* Foundation.framework */; };
+		B6C53B9E1D60ACF386532D58 /* ReactiveBridgeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B6C53DA5A43EFE3880B110D0 /* ReactiveBridgeTests.m */; };
+		B6C53BA3C605465BB1F3AF79 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = B6C537E135931BF852FE514B /* README.md */; };
+		B6C53C02826356161C6FCFD3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6C5341C8103DB6E04C27C53 /* UIKit.framework */; };
+		B6C53C805B16ABDAEAC2B549 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6C5341C8103DB6E04C27C53 /* UIKit.framework */; };
+		B6C53CFF9DE0BB46E13DBE47 /* LGReactiveBridgeAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B6C5380DA3D8B293281F6AA9 /* LGReactiveBridgeAppDelegate.m */; };
+		B6C53DA29589702936606213 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6C53FB23F5EB2D289B36FC5 /* Foundation.framework */; };
+		B6C53E9D5827A61BB052EE56 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6C53C954798981207AC4BD2 /* CoreGraphics.framework */; };
+		B6C53ECC2F3871A5D772D3CC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B6C53FB07F3F552EE05A0431 /* InfoPlist.strings */; };
+		B6C53ED42AE62E54CDDEF167 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B6C53A191DCF04DD1AC3587B /* InfoPlist.strings */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B6C535758D70FAD00C0AA48A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B6C53D81C4822A085BE1FA74 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B6C5343132E539C128A25089;
+			remoteInfo = ReactiveBridge;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		996AEF195CDC461F94054618 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		B3850C4022A5495696C9A8BF /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B6C530E06F1A4BB7C3D59B47 /* ReactiveBridgeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = "ReactiveBridgeTests-Info.plist"; sourceTree = "<group>"; };
+		B6C5317D607694E073BD68E8 /* screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screen.png; sourceTree = "<group>"; };
+		B6C53264D19D057D27D41C58 /* ReactiveBridge-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = "ReactiveBridge-Info.plist"; sourceTree = "<group>"; };
+		B6C532B837CD4D0E1356D4B2 /* LGReactiveBridgeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGReactiveBridgeViewController.h; sourceTree = "<group>"; };
+		B6C5341C8103DB6E04C27C53 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		B6C534D9D8EF09F932744C5F /* WebViewJavascriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewJavascriptBridge.h; sourceTree = "<group>"; };
+		B6C5355108F478FDC094F147 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B6C5367F194296D9029FBD8E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B6C536A34D10AA70533F8557 /* ReactiveBridge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReactiveBridge.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B6C536B07921832A91E1346D /* WebViewJavascriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewJavascriptBridge.m; sourceTree = "<group>"; };
+		B6C537228F7ACBCF460B77BA /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; path = www; sourceTree = "<group>"; };
+		B6C537B351C87DD474ED6DEE /* WebViewJavascriptBridge.js.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = WebViewJavascriptBridge.js.txt; sourceTree = "<group>"; };
+		B6C537D0EAF740802B5992E0 /* ReactiveBridgeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReactiveBridgeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B6C537E135931BF852FE514B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = file.md; path = README.md; sourceTree = "<group>"; };
+		B6C5380DA3D8B293281F6AA9 /* LGReactiveBridgeAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LGReactiveBridgeAppDelegate.m; sourceTree = "<group>"; };
+		B6C538159B48537CBC5FC505 /* LGReactiveBridgeAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LGReactiveBridgeAppDelegate.h; sourceTree = "<group>"; };
+		B6C539AAB23FB8605415705F /* screen1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screen1.png; sourceTree = "<group>"; };
+		B6C539CFE183356F1DDA3276 /* screen2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screen2.png; sourceTree = "<group>"; };
+		B6C539EC127BF161C7926CC6 /* LGReactiveBridgeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGReactiveBridgeViewController.m; sourceTree = "<group>"; };
+		B6C53B3902E44B77E9B8A309 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		B6C53C954798981207AC4BD2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		B6C53DA5A43EFE3880B110D0 /* ReactiveBridgeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReactiveBridgeTests.m; sourceTree = "<group>"; };
+		B6C53DA8BF1A9D100A5854C5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		B6C53EA1C6DD71045DADBC81 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B6C53F66600ED939D1DAB9B1 /* ReactiveBridge-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ReactiveBridge-Prefix.pch"; sourceTree = "<group>"; };
+		B6C53FB23F5EB2D289B36FC5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B6C537112C57A9DEA1FC2D71 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B6C53DA29589702936606213 /* Foundation.framework in Frameworks */,
+				B6C53E9D5827A61BB052EE56 /* CoreGraphics.framework in Frameworks */,
+				B6C53C805B16ABDAEAC2B549 /* UIKit.framework in Frameworks */,
+				A6C18E02F5E74DE39DAE563D /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B6C53B24B097067FBF9B7FF6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B6C5375F0FA302F6D7B842F9 /* XCTest.framework in Frameworks */,
+				B6C537A85205F5201D77BDEF /* Foundation.framework in Frameworks */,
+				B6C53C02826356161C6FCFD3 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B6C5301C681CD7B91FD333B5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B6C536A34D10AA70533F8557 /* ReactiveBridge.app */,
+				B6C537D0EAF740802B5992E0 /* ReactiveBridgeTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B6C53130225CE49A13D86B72 /* ReactiveBridgeTests */ = {
+			isa = PBXGroup;
+			children = (
+				B6C5349E1B8B7760AF0D9F5C /* Supporting Files */,
+				B6C53DA5A43EFE3880B110D0 /* ReactiveBridgeTests.m */,
+			);
+			path = ReactiveBridgeTests;
+			sourceTree = "<group>";
+		};
+		B6C5319404D3E3E1F78ABBD4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B6C53FB23F5EB2D289B36FC5 /* Foundation.framework */,
+				B6C53C954798981207AC4BD2 /* CoreGraphics.framework */,
+				B6C5341C8103DB6E04C27C53 /* UIKit.framework */,
+				B6C53B3902E44B77E9B8A309 /* XCTest.framework */,
+				B3850C4022A5495696C9A8BF /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B6C5349E1B8B7760AF0D9F5C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B6C530E06F1A4BB7C3D59B47 /* ReactiveBridgeTests-Info.plist */,
+				B6C53FB07F3F552EE05A0431 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B6C539287F6F0DC2083A067C /* ReactiveBridge */ = {
+			isa = PBXGroup;
+			children = (
+				B6C53B18F2AF32C2C617A205 /* Supporting Files */,
+				B6C538159B48537CBC5FC505 /* LGReactiveBridgeAppDelegate.h */,
+				B6C5380DA3D8B293281F6AA9 /* LGReactiveBridgeAppDelegate.m */,
+				B6C53DA8BF1A9D100A5854C5 /* Images.xcassets */,
+				B6C532B837CD4D0E1356D4B2 /* LGReactiveBridgeViewController.h */,
+				B6C539EC127BF161C7926CC6 /* LGReactiveBridgeViewController.m */,
+			);
+			path = ReactiveBridge;
+			sourceTree = "<group>";
+		};
+		B6C53B18F2AF32C2C617A205 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B6C53264D19D057D27D41C58 /* ReactiveBridge-Info.plist */,
+				B6C53A191DCF04DD1AC3587B /* InfoPlist.strings */,
+				B6C5367F194296D9029FBD8E /* main.m */,
+				B6C53F66600ED939D1DAB9B1 /* ReactiveBridge-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B6C53B53269B9A04A2C52008 = {
+			isa = PBXGroup;
+			children = (
+				B6C5301C681CD7B91FD333B5 /* Products */,
+				B6C5319404D3E3E1F78ABBD4 /* Frameworks */,
+				B6C539287F6F0DC2083A067C /* ReactiveBridge */,
+				B6C53130225CE49A13D86B72 /* ReactiveBridgeTests */,
+				996AEF195CDC461F94054618 /* Pods.xcconfig */,
+				B6C53D9CBB68EBC51D88DBDF /* WebViewJavascriptBridge */,
+				B6C537228F7ACBCF460B77BA /* www */,
+				B6C537E135931BF852FE514B /* README.md */,
+				B6C539AAB23FB8605415705F /* screen1.png */,
+				B6C539CFE183356F1DDA3276 /* screen2.png */,
+				B6C5317D607694E073BD68E8 /* screen.png */,
+			);
+			sourceTree = "<group>";
+		};
+		B6C53D9CBB68EBC51D88DBDF /* WebViewJavascriptBridge */ = {
+			isa = PBXGroup;
+			children = (
+				B6C534D9D8EF09F932744C5F /* WebViewJavascriptBridge.h */,
+				B6C536B07921832A91E1346D /* WebViewJavascriptBridge.m */,
+				B6C537B351C87DD474ED6DEE /* WebViewJavascriptBridge.js.txt */,
+			);
+			path = WebViewJavascriptBridge;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B6C5343132E539C128A25089 /* ReactiveBridge */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B6C532EA415FD915912C9D5D /* Build configuration list for PBXNativeTarget "ReactiveBridge" */;
+			buildPhases = (
+				38E80365ADF142E094535368 /* Check Pods Manifest.lock */,
+				B6C5348FFAD6EE6578E100A6 /* Sources */,
+				B6C537112C57A9DEA1FC2D71 /* Frameworks */,
+				B6C539C4D9F57D8C9CF87B16 /* Resources */,
+				63C0D821F04841C8A0FCC9B3 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ReactiveBridge;
+			productName = ReactiveBridge;
+			productReference = B6C536A34D10AA70533F8557 /* ReactiveBridge.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B6C53BC41FCC676AAC8902FF /* ReactiveBridgeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B6C53BDCA7674E02E9A5D999 /* Build configuration list for PBXNativeTarget "ReactiveBridgeTests" */;
+			buildPhases = (
+				B6C53FD44050D9C73425423B /* Sources */,
+				B6C53B24B097067FBF9B7FF6 /* Frameworks */,
+				B6C5370E68205C5CA202CB6A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B6C53D659108233E1E0E2960 /* PBXTargetDependency */,
+			);
+			name = ReactiveBridgeTests;
+			productName = ReactiveBridgeTests;
+			productReference = B6C537D0EAF740802B5992E0 /* ReactiveBridgeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B6C53D81C4822A085BE1FA74 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = LogicalGuess;
+			};
+			buildConfigurationList = B6C53308E629CA47C2E5D194 /* Build configuration list for PBXProject "ReactiveBridge" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = B6C53B53269B9A04A2C52008;
+			productRefGroup = B6C5301C681CD7B91FD333B5 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+			);
+			projectRoot = "";
+			targets = (
+				B6C5343132E539C128A25089 /* ReactiveBridge */,
+				B6C53BC41FCC676AAC8902FF /* ReactiveBridgeTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B6C5370E68205C5CA202CB6A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B6C53ECC2F3871A5D772D3CC /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B6C539C4D9F57D8C9CF87B16 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B6C53ED42AE62E54CDDEF167 /* InfoPlist.strings in Resources */,
+				B6C5324A98A3CB15FB510A51 /* Images.xcassets in Resources */,
+				B6C5308460B9FB5C02787A18 /* WebViewJavascriptBridge.js.txt in Resources */,
+				B6C530BB0AC39937128CDC41 /* www in Resources */,
+				B6C53BA3C605465BB1F3AF79 /* README.md in Resources */,
+				B6C53057161731F04365842C /* screen1.png in Resources */,
+				B6C53090821C88CCE2BD22DC /* screen2.png in Resources */,
+				B6C534DC75D79BD2919B6810 /* screen.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		38E80365ADF142E094535368 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		63C0D821F04841C8A0FCC9B3 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B6C5348FFAD6EE6578E100A6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B6C531EF8FB0D7DBF17F3AD9 /* main.m in Sources */,
+				B6C53CFF9DE0BB46E13DBE47 /* LGReactiveBridgeAppDelegate.m in Sources */,
+				B6C53233E7EFB5DA9B705939 /* LGReactiveBridgeViewController.m in Sources */,
+				B6C530E58C286CAC8FE36C0B /* WebViewJavascriptBridge.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B6C53FD44050D9C73425423B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B6C53B9E1D60ACF386532D58 /* ReactiveBridgeTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B6C53D659108233E1E0E2960 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B6C5343132E539C128A25089 /* ReactiveBridge */;
+			targetProxy = B6C535758D70FAD00C0AA48A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B6C53A191DCF04DD1AC3587B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B6C5355108F478FDC094F147 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		B6C53FB07F3F552EE05A0431 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B6C53EA1C6DD71045DADBC81 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B6C5309D90525AAD71D49BB2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ReactiveBridge/ReactiveBridge-Prefix.pch";
+				INFOPLIST_FILE = "ReactiveBridgeTests/ReactiveBridgeTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+		B6C5323B93833D940963DAF0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INSTALL_OWNER = logicalguess;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B6C534B84E5D930089E12CAF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 996AEF195CDC461F94054618 /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ReactiveBridge/ReactiveBridge-Prefix.pch";
+				INFOPLIST_FILE = "ReactiveBridge/ReactiveBridge-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		B6C535ABED4438210DBBB808 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 996AEF195CDC461F94054618 /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ReactiveBridge/ReactiveBridge-Prefix.pch";
+				INFOPLIST_FILE = "ReactiveBridge/ReactiveBridge-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		B6C5382A0B8292C56A1CD332 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ReactiveBridge/ReactiveBridge-Prefix.pch";
+				INFOPLIST_FILE = "ReactiveBridgeTests/ReactiveBridgeTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		B6C53DF953F3E7C3DA722A97 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INSTALL_OWNER = logicalguess;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B6C532EA415FD915912C9D5D /* Build configuration list for PBXNativeTarget "ReactiveBridge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B6C534B84E5D930089E12CAF /* Release */,
+				B6C535ABED4438210DBBB808 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B6C53308E629CA47C2E5D194 /* Build configuration list for PBXProject "ReactiveBridge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B6C53DF953F3E7C3DA722A97 /* Release */,
+				B6C5323B93833D940963DAF0 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B6C53BDCA7674E02E9A5D999 /* Build configuration list for PBXNativeTarget "ReactiveBridgeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B6C5309D90525AAD71D49BB2 /* Release */,
+				B6C5382A0B8292C56A1CD332 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B6C53D81C4822A085BE1FA74 /* Project object */;
+}

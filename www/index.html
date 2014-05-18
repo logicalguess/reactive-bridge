@@ -1,0 +1,251 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=0.4, maximum-scale=0.4, user-scalable=no">
+
+    <link rel="stylesheet" type="text/css" href="css/register.css">
+    <script type="text/javascript" src="lib/jquery.js"></script>
+    <script type="text/javascript" src="lib/jquery.mockjax.js"></script>
+    <script type="text/javascript" src="lib/Bacon.js"></script>
+    <script type="text/javascript" src="lib/bacon.model.js"></script>
+    <script type="text/javascript" src="lib/bacon.jquery.js"></script>
+    <script type="text/javascript" src="mocks.js"></script>
+    <script>
+        function connectWebViewJavascriptBridge(callback) {
+            if (window.WebViewJavascriptBridge) {
+                callback(WebViewJavascriptBridge)
+            } else {
+                document.addEventListener('WebViewJavascriptBridgeReady', function() {
+                    callback(WebViewJavascriptBridge)
+                }, false)
+            }
+        }
+
+        connectWebViewJavascriptBridge(function(bridge) {
+            function log(message, data) {
+                console.log(message, data)
+            }
+            bridge.init(function(message, responseCallback) {
+                log('JS got a message', message)
+                var data = { 'Javascript Responds':'Wee!' }
+                log('JS responding with', data)
+                responseCallback(data)
+            })
+        })
+    </script>
+    <script type="text/javascript">
+        function wireAjaxOnChange(input, svcInfo, init) {
+            var request = input.changes().filter(nonEmpty).skipDuplicates().throttle(300)
+                    .map(svcInfo);
+
+            var response = request.ajax();
+
+            return {
+                requestEntered: input.map(nonEmpty),
+                responsePending: request.awaiting(response),
+                responseValue: response.toProperty(init)
+            }
+        }
+
+        function wireAjaxOnEvent(eventStream, svcTemplate) {
+            var request = Bacon.combineTemplate(svcTemplate).sampledBy(eventStream);
+            var response = request.ajax();
+
+            return {
+                requestEntered: request.map(true).toProperty(false),
+                responsePending: request.awaiting(response),
+                responseStream: response
+            }
+        }
+
+        function createComponent() {
+            var model = new Bacon.Model({});
+            var lenses = {};
+            lenses["username"] = model.lens("username");
+            lenses["fullname"] = model.lens("fullname");
+
+            var streams = {};
+            streams["username_availability"] = new Bacon.Bus();
+            streams["register"] = new Bacon.Bus();
+
+            streams["username_availability"].plug(lenses["username"]);
+
+            var userNameWire = wireAjaxOnChange(streams["username_availability"].toProperty(), function (user) {
+                return { url: "/usernameavailable/" + user };
+            }, true);
+
+            userNameWire.requestEntered.onValue(function () {
+                lenses["fullname"].set("");
+            });
+
+            // registration
+            var registrationWire = wireAjaxOnEvent(streams["register"], {
+                type: "post",
+                url: "/register",
+                contentType: "application/json",
+                data: JSON.stringify(model.get())
+            });
+
+            registrationWire.responseStream.onValue(function () {
+                model.set({username: "", fullname: ""});
+            });
+
+            var usernameEntered = userNameWire.requestEntered;
+            var usernameAvailable = userNameWire.responseValue;
+            var availabilityPending = userNameWire.responsePending;
+            var registrationPending = registrationWire.responsePending;
+            var registrationSent = registrationWire.requestEntered;
+            var registrationResponse = registrationWire.responseStream;
+
+            var fullnameEntered = lenses["fullname"].map(nonEmpty);
+
+            var fullnameEnabled = usernameEntered.and(usernameAvailable)
+                    .and(availabilityPending.not());
+
+            var registerButtonEnabled = usernameEntered.and(fullnameEntered).and(usernameAvailable)
+                    .and(availabilityPending.not()).and(registrationSent.not());
+
+
+            return {
+                onStateChange: model.onValue.bind(model),
+                lenses: lenses,
+                bind: function(name, stream) {
+                    lenses[name].bind(stream);
+                },
+                plug: function(name, stream) {
+                    streams[name].plug(stream);
+                },
+                usernameEntered: userNameWire.requestEntered,
+                usernameAvailable: userNameWire.responseValue,
+                availabilityPending: userNameWire.responsePending,
+                registrationPending: registrationWire.responsePending,
+                registrationSent: registrationWire.requestEntered,
+                registrationResponse: registrationWire.responseStream,
+                fullnameEnabled: fullnameEnabled,
+                registerButtonEnabled: registerButtonEnabled
+            }
+        }
+
+        function show(x) {
+            console.log(x);
+        }
+
+        function nonEmpty(x) {
+            return x && x.length > 0;
+        }
+
+        function setVisibility(element, visible) {
+            element.toggle(visible);
+        }
+
+        function setEnabled(element, enabled) {
+            element.attr("disabled", !enabled);
+        }
+
+        function createView(component) {
+
+            // UI elements
+            var elems = {};
+            elems["username"] = $("#username input");
+            elems["fullname"] = $("#fullname input");
+            elems["register"] = $("#register button");
+            elems["unavailability_label"] = $("#username-unavailable");
+            elems["username_availability_spinner"] = $("#username .ajax");
+            elems["register_spinner"] = $("#register .ajax");
+
+            // bindings
+            component.plug("register", elems["register"].asEventStream("click").doAction(".preventDefault"));
+
+            component.bind("username", Bacon.$.textFieldValue(elems["username"]));
+            component.bind("fullname", Bacon.$.textFieldValue(elems["fullname"]));
+            component.onStateChange(function (m) {
+                $("#result").text("");
+                console.log("model", m);
+            });
+
+            // visual effects
+            component.usernameAvailable.not().and(component.availabilityPending.not()).onValue(setVisibility,
+                    elems["unavailability_label"]);
+            component.availabilityPending.onValue(setVisibility, elems["username_availability_spinner"]);
+
+            component.fullnameEnabled.onValue(setEnabled, elems["fullname"]);
+            component.registerButtonEnabled.onValue(setEnabled, elems["register"]);
+            component.registrationPending.onValue(setVisibility, elems["register_spinner"]);
+            component.registrationResponse.onValue(function () {
+                $("#result").text("Thanks dude!");
+            })
+        }
+
+        function bridgeStreams(bridge, component) {
+            var registerBus = new Bacon.Bus();
+            component.plug("register", registerBus);
+
+            bridge.registerHandler('registerHandler', function(data, responseCallback) {
+                registerBus.push(data);
+                responseCallback('INVOKED REGISTER');
+            });
+
+            bridge.registerHandler('usernameHandler', function(data, responseCallback) {
+                component.lenses['username'].set(data);
+                responseCallback('GOT USERNAME ' + data);
+            });
+
+            bridge.registerHandler('fullnameHandler', function(data, responseCallback) {
+                component.lenses['fullname'].set(data);
+                responseCallback('GOT FULLNAME ' + data);
+            });
+
+            component.fullnameEnabled.onValue(function(val){
+                bridge.callHandler("fullNameEnabled", val);
+            });
+
+            component.availabilityPending.onValue(function(val){
+                bridge.callHandler("availabilityPending", val);
+            });
+
+            component.registrationPending.onValue(function(val){
+                bridge.callHandler("registrationPending", val);
+            });
+
+            component.registerButtonEnabled.onValue(function(val){
+                bridge.callHandler("registerButtonEnabled", val);
+            });
+
+            component.usernameAvailable.onValue(function(val){
+                bridge.callHandler("unavailableLabelShowing", val);
+            });
+
+
+            component.registrationResponse(function (val) {
+                bridge.callHandler("reset", val);
+            });
+        }
+
+        $(function () {
+            var component = createComponent();
+            createView(component);
+            connectWebViewJavascriptBridge(function(bridge){
+                bridgeStreams(bridge, component);
+            });
+        })
+    </script>
+</head>
+<body>
+<form id="login-container">
+    <h1>Bacon Registration Form</h1>
+
+    <div id="username">
+        <input type="text" placeholder="username">
+        <em class="ajax"></em>
+        <em id="username-unavailable" class="tooltip">Username is unavailable</em>
+    </div>
+    <div id="fullname">
+        <input type="text" placeholder="Full Name">
+    </div>
+    <div id="register">
+        <button>Get some!</button>
+        <em class="ajax"></em>
+        <span id="result"></span>
+    </div>
+</form>
+</body>
+</html>
