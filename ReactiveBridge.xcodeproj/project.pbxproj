@@ -16,9 +16,10 @@
 		B6C531EF8FB0D7DBF17F3AD9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B6C5367F194296D9029FBD8E /* main.m */; };
 		B6C53233E7EFB5DA9B705939 /* LGReactiveBridgeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6C539EC127BF161C7926CC6 /* LGReactiveBridgeViewController.m */; };
 		B6C5324A98A3CB15FB510A51 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6C53DA8BF1A9D100A5854C5 /* Images.xcassets */; };
-		B6C534DC75D79BD2919B6810 /* screen.png in Resources */ = {isa = PBXBuildFile; fileRef = B6C5317D607694E073BD68E8 /* screen.png */; };
+		B6C534DC75D79BD2919B6810 /* screen3.png in Resources */ = {isa = PBXBuildFile; fileRef = B6C5317D607694E073BD68E8 /* screen3.png */; };
 		B6C5375F0FA302F6D7B842F9 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6C53B3902E44B77E9B8A309 /* XCTest.framework */; };
 		B6C537A85205F5201D77BDEF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6C53FB23F5EB2D289B36FC5 /* Foundation.framework */; };
+		B6C5398323B5483FB14B3CF9 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = B6C535C83CA50DBB6E5A55A2 /* .gitignore */; };
 		B6C53B9E1D60ACF386532D58 /* ReactiveBridgeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B6C53DA5A43EFE3880B110D0 /* ReactiveBridgeTests.m */; };
 		B6C53BA3C605465BB1F3AF79 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = B6C537E135931BF852FE514B /* README.md */; };
 		B6C53C02826356161C6FCFD3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6C5341C8103DB6E04C27C53 /* UIKit.framework */; };
@@ -44,12 +45,13 @@
 		996AEF195CDC461F94054618 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		B3850C4022A5495696C9A8BF /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6C530E06F1A4BB7C3D59B47 /* ReactiveBridgeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = "ReactiveBridgeTests-Info.plist"; sourceTree = "<group>"; };
-		B6C5317D607694E073BD68E8 /* screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screen.png; sourceTree = "<group>"; };
+		B6C5317D607694E073BD68E8 /* screen3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screen3.png; sourceTree = "<group>"; };
 		B6C53264D19D057D27D41C58 /* ReactiveBridge-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = "ReactiveBridge-Info.plist"; sourceTree = "<group>"; };
 		B6C532B837CD4D0E1356D4B2 /* LGReactiveBridgeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGReactiveBridgeViewController.h; sourceTree = "<group>"; };
 		B6C5341C8103DB6E04C27C53 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		B6C534D9D8EF09F932744C5F /* WebViewJavascriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewJavascriptBridge.h; sourceTree = "<group>"; };
 		B6C5355108F478FDC094F147 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B6C535C83CA50DBB6E5A55A2 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = file.gitignore; path = .gitignore; sourceTree = "<group>"; };
 		B6C5367F194296D9029FBD8E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B6C536A34D10AA70533F8557 /* ReactiveBridge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReactiveBridge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6C536B07921832A91E1346D /* WebViewJavascriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewJavascriptBridge.m; sourceTree = "<group>"; };
@@ -172,7 +174,8 @@
 				B6C537E135931BF852FE514B /* README.md */,
 				B6C539AAB23FB8605415705F /* screen1.png */,
 				B6C539CFE183356F1DDA3276 /* screen2.png */,
-				B6C5317D607694E073BD68E8 /* screen.png */,
+				B6C5317D607694E073BD68E8 /* screen3.png */,
+				B6C535C83CA50DBB6E5A55A2 /* .gitignore */,
 			);
 			sourceTree = "<group>";
 		};
@@ -274,7 +277,8 @@
 				B6C53BA3C605465BB1F3AF79 /* README.md in Resources */,
 				B6C53057161731F04365842C /* screen1.png in Resources */,
 				B6C53090821C88CCE2BD22DC /* screen2.png in Resources */,
-				B6C534DC75D79BD2919B6810 /* screen.png in Resources */,
+				B6C534DC75D79BD2919B6810 /* screen3.png in Resources */,
+				B6C5398323B5483FB14B3CF9 /* .gitignore in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
