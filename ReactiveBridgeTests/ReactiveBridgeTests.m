@@ -2,7 +2,7 @@
 //  ReactiveBridgeTests.m
 //  ReactiveBridgeTests
 //
-//  Created by Gonciulea, Constantin on 5/18/14.
+//  Created on 5/18/14.
 //  Copyright (c) 2014 LogicalGuess. All rights reserved.
 //
 
