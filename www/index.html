@@ -215,7 +215,7 @@
             });
 
 
-            component.registrationResponse(function (val) {
+            component.registrationResponse.onValue(function (val) {
                 bridge.callHandler("reset", val);
             });
         }
