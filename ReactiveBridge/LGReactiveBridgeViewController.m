@@ -78,10 +78,10 @@
     titleLabel.textColor = [UIColor whiteColor];
     titleLabel.font = [UIFont boldSystemFontOfSize:14];
     [formView addSubview:titleLabel];
-    titleLabel.frame = CGRectMake(20, 10, 150, 25);
+    titleLabel.frame = CGRectMake(20, 10, 200, 25);
 
-    UITextField *userNameField = [self addField:formView withRect:CGRectMake(20, 40, 135, 20) placeholder:@"username"];
-    UITextField *fullNameField = [self addField:formView withRect:CGRectMake(20, 70, 135, 20) placeholder:@"Full Name"];
+    UITextField *userNameField = [self addField:formView withRect:CGRectMake(20, 40, 135, 20) placeholder:@"username" enabled:YES];
+    UITextField *fullNameField = [self addField:formView withRect:CGRectMake(20, 70, 135, 20) placeholder:@"Full Name" enabled:NO];
 
     [self addImage:formView withRect:CGRectMake(180, -22, 80, 80) imagePath:@"bacon.png" ];
 
@@ -91,6 +91,7 @@
     availabilityLabel.backgroundColor = [UIColor redColor];
     availabilityLabel.layer.cornerRadius = 5;
     availabilityLabel.font = [UIFont italicSystemFontOfSize:11];
+    availabilityLabel.hidden = YES;
     [formView addSubview:availabilityLabel];
     availabilityLabel.frame = CGRectMake(160, 35, 150, 25);
 
@@ -116,6 +117,7 @@
 
 
     [userNameField.rac_textSignal subscribeNext:^(NSString * name) {
+        availabilityLabel.hidden = YES;
         [[self bridge] callHandler:@"usernameHandler" data:name];
     }];
 
@@ -140,7 +142,7 @@
         b ? [activityIndicator startAnimating] : [activityIndicator stopAnimating];
     }];
 
-    [[self bridge] registerHandler:@"unavailableLabelShowing" handler:^(id data, WVJBResponseCallback responseCallback) {
+    [[self bridge] registerHandler:@"unavailableLabelHiding" handler:^(id data, WVJBResponseCallback responseCallback) {
         BOOL b = [data boolValue];
         availabilityLabel.hidden = b;
     }];
@@ -166,7 +168,7 @@
     [inView addSubview:starImgView];
 }
 
-- (UITextField *)addField:(UIView *)inView withRect:(CGRect)cgRect placeholder:(NSString *) placeholder{
+- (UITextField *)addField:(UIView *)inView withRect:(CGRect)cgRect placeholder:(NSString *)placeholder enabled:(BOOL)enabled {
     UITextField *field = [[UITextField alloc] initWithFrame:cgRect];
     field.borderStyle = UITextBorderStyleRoundedRect;
     field.font = [UIFont systemFontOfSize:15];
@@ -179,6 +181,10 @@
     [field addTarget:self
               action:@selector(textFieldFinished:)
     forControlEvents:UIControlEventEditingDidEndOnExit];
+    field.enabled = enabled;
+    if(!enabled) {
+      field.backgroundColor = [UIColor grayColor];
+    }
     field.delegate = self;
     [inView addSubview:field];
     return field;

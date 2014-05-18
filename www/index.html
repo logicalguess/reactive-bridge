@@ -195,7 +195,7 @@
             });
 
             component.fullnameEnabled.onValue(function(val){
-                bridge.callHandler("fullNameEnabled", val);
+                bridge.callHandler("fullNameEnabled", !!val);
             });
 
             component.availabilityPending.onValue(function(val){
@@ -207,11 +207,11 @@
             });
 
             component.registerButtonEnabled.onValue(function(val){
-                bridge.callHandler("registerButtonEnabled", val);
+                bridge.callHandler("registerButtonEnabled", !!val);
             });
 
             component.usernameAvailable.onValue(function(val){
-                bridge.callHandler("unavailableLabelShowing", val);
+                bridge.callHandler("unavailableLabelHiding", val);
             });
 
 
