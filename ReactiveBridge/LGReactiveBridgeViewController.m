@@ -83,7 +83,7 @@
     UITextField *userNameField = [self addField:formView withRect:CGRectMake(20, 40, 135, 20) placeholder:@"username" enabled:YES];
     UITextField *fullNameField = [self addField:formView withRect:CGRectMake(20, 70, 135, 20) placeholder:@"Full Name" enabled:NO];
 
-    [self addImage:formView withRect:CGRectMake(180, -22, 80, 80) imagePath:@"bacon.png" ];
+    [self addImage:formView withRect:CGRectMake(180, -22, 80, 80) imagePath:@"www/images/bacon.png" ];
 
     UILabel *availabilityLabel = [[UILabel alloc] init];
     availabilityLabel.text = @" Username is unavailable";
